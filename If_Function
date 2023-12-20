@@ -1,0 +1,10 @@
+Function Nossa_SE(pQtdEstoque, pVerdadeiro, pFalso) As Variant
+    
+    If pQtdEstoque < 30 Then
+        Nossa_SE = pVerdadeiro
+    Else
+        Nossa_SE = pFalso
+    End If
+    
+    Planilha1.Calculate
+End Function
