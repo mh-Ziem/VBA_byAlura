@@ -1,0 +1,23 @@
+Function replace_Codes(Celula As String) As String
+Dim EncontrouValor
+Dim d
+Set d = CreateObject("Scripting.Dictionary")
+
+  d("PALAVRA_ESTRANGEIRA_01") = "TRADUÇÃO_02"
+
+Dim ximbinha
+Set ximbinha = CreateObject("Scripting.Dictionary")
+
+  ximbinha("PALAVRA_ESTRANGEIRA_02") = "TRADUÇÃO_02"
+   
+    
+For Each k In d.keys
+     If InStr(Celula, k) > 0 Then
+       If ximbinha.Exists(Celula) Then
+         EncontrouValor = ximbinha(Celula)
+       Else
+         EncontrouValor = d(k)
+       End If
+    End If
+    replace_Codes = EncontrouValor
+Next
