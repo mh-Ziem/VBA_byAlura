@@ -1,0 +1,18 @@
+Function Max_v02(pIntervalo As Range) As Variant
+
+
+Dim cel_maior As Double
+cel_maior = 0
+
+    For Each celula In pIntervalo
+    
+    If celula > cel_maior Then
+        cel_maior = celula
+        End If
+        
+    
+    Next
+
+Max_v02 = cel_maior
+
+End Function
