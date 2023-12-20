@@ -3,7 +3,7 @@ Dim EncontrouValor
 Dim d
 Set d = CreateObject("Scripting.Dictionary")
 
-  d("PALAVRA_ESTRANGEIRA_01") = "TRADUÇÃO_02"
+  d("PALAVRA_ESTRANGEIRA_01") = "TRADUÇÃO_01"
 
 Dim ximbinha
 Set ximbinha = CreateObject("Scripting.Dictionary")
