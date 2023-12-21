@@ -1,0 +1,18 @@
+Function MAXIMOSES_02(pIntervalo_Valores As Range, pIntervalo_Criterios As Range, pCriterio As String) As Variant
+
+aux_retorno = 0
+
+For i = 1 To pIntervalo_Valores.Count
+    
+    If pIntervalo_Criterios.Cells(i, 1) = pCriterio Then
+        If pIntervalo_Valores.Cells(i, 1) > aux_retorno Then
+            aux_retorno = pIntervalo_Valores.Cells(i, 1)
+            
+        End If
+    End If
+  
+Next
+
+MAXIMOSES_02 = aux_retorno
+
+End Function
