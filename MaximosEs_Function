@@ -1,13 +1,19 @@
-Function MAXIMOSES_02(pIntervalo_Valores As Range, pIntervalo_Criterios As Range, pCriterio As String) As Variant
+Function MAXIMOSES_02(pIV_01 As Range, pIC_01 As Range, pCritr As String, pIC_02 As Range, pCritr_02 As String) As Variant
+
+'IV = Intervalo de valores
+'IC = Intervalo de Criterios
+'Critr = Criterio Final
+
 
 aux_retorno = 0
 
-For i = 1 To pIntervalo_Valores.Count
+For i = 1 To pIV_01.Count
     
-    If pIntervalo_Criterios.Cells(i, 1) = pCriterio Then
-        If pIntervalo_Valores.Cells(i, 1) > aux_retorno Then
-            aux_retorno = pIntervalo_Valores.Cells(i, 1)
-            
+        If pIC_01.Cells(i, 1) = pCritr And pIC_02.Cells(i, 1) = pCritr_02 Then
+                
+        If pIV_01.Cells(i, 1) > aux_retorno Then
+            aux_retorno = pIV_01.Cells(i, 1)
+        
         End If
     End If
   
